@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Container, Row, Col } from 'reactstrap';
-import Header from './components/Header'
+import Header from './components/Header';
+import Projects from './components/Projects';
 // Redux //
 import { Provider } from 'react-redux';
 import store from './store';
-
 
 class App extends Component {
   render() {
@@ -16,7 +16,9 @@ class App extends Component {
             <Header />
             <Container>
               <Row>
-                <Col>.col</Col>
+                <Col>
+                  <Projects />
+                </Col>
               </Row>
             </Container>
           </React.Fragment>
