@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Container, Row, Col } from 'reactstrap';
 import Header from './components/Header';
 import Projects from './components/Projects';
+import Homer from './components/Homer';
+import Project from './components/Project';
 // Redux //
 import { Provider } from 'react-redux';
 import store from './store';
@@ -13,14 +15,10 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <React.Fragment>
-            <Header />
-            <Container>
-              <Row>
-                <Col>
-                  <Projects />
-                </Col>
-              </Row>
-            </Container>
+            <Switch>
+              <Route exact path="/" component={Homer} />
+              <Route path="/project/:id" exact component={Project} />
+            </Switch>
           </React.Fragment>
         </Router>
       </Provider>

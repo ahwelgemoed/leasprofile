@@ -44,3 +44,60 @@
 //     color: white;
 //   }
 // }
+.card {
+  background: #faf0ea;
+}
+.card-img {
+  opacity: 1;
+}
+.card-img {
+  opacity: 0.4;
+}
+.card-img-overlay {
+  // opacity: 0.4;
+}
+.myImg {
+  width: 100%;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  // background-color: #15b085;
+}
+
+.card:hover .overlay {
+  opacity: 0.8;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.navbar-brand {
+  font-family: 'Abril Fatface', cursive;
+}
+.nav-link {
+  font-family: 'Muli', sans-serif;
+  font-weight: 300;
+}
+p {
+  font-family: 'Muli', sans-serif;
+  font-weight: 400;
+}
+.card {
+  border: none;
+}
