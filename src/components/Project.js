@@ -36,41 +36,69 @@ class Project extends Component {
     console.log(project);
     if (project) {
       return (
-        <div className="home_header_banner">
-          <Container>
-            <Navbar light expand="md">
-              <NavbarBrand href="/">Leandra de Sousa</NavbarBrand>
-              <NavbarToggler onClick={this.toggle} />
-              <Collapse className="kykNet" isOpen={this.state.isOpen} navbar>
-                <Nav className="ml-auto" navbar>
-                  <NavItem>
-                    <NavLink href="/components/">Projects</NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href="https://github.com/reactstrap/reactstrap">
-                      Resume
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href="https://github.com/reactstrap/reactstrap">
-                      Get in Touch
-                    </NavLink>
-                  </NavItem>
-                </Nav>
-              </Collapse>
-            </Navbar>
-            <Row>
-              <Col xs="6">
-                <div className="Header_Body">
-                  <h3>{project.Title}</h3>
+        <React.Fragment>
+          <div className="home_header_banner">
+            <Container>
+              <Navbar light expand="md">
+                <NavbarBrand href="/">'Go Back'</NavbarBrand>
+                <NavbarToggler onClick={this.toggle} />
+                <Collapse className="kykNet" isOpen={this.state.isOpen} navbar>
+                  <Nav className="ml-auto" navbar>
+                    <NavItem>
+                      <NavLink href="/components/">Projects</NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink href="https://github.com/reactstrap/reactstrap">
+                        Resume
+                      </NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink href="https://github.com/reactstrap/reactstrap">
+                        Get in Touch
+                      </NavLink>
+                    </NavItem>
+                  </Nav>
+                </Collapse>
+              </Navbar>
+              <Row>
+                <Col xs="6">
+                  <div className="Header_Body_Col">
+                    <h3>{project.Title}</h3>
+                    <Col xs="12">
+                      <div className="arbit" />
+                    </Col>
 
-                  <p>{project.Body}</p>
-                </div>
-              </Col>
-              <Col xs="6">Hello</Col>
-            </Row>
-          </Container>
-        </div>
+                    <p>{project.Body}</p>
+                  </div>
+                </Col>
+                <Col xs="6" className="Header_Body_Col">
+                  <span>
+                    {project.Technology.map((t, i) => (
+                      <span key={i}>{t} </span>
+                    ))}
+                  </span>
+                  <div className="people">
+                    <h2>team members</h2>
+                    {project.People.map((p, i) => (
+                      <p key={i}> {p}</p>
+                    ))}
+                  </div>
+                </Col>
+              </Row>
+            </Container>
+          </div>
+
+          <div
+            className="banner_Img"
+            style={{
+              backgroundImage: `url(${project.BannerImg})`,
+              backgroundPosition: 'center',
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+              height: '80vh'
+            }}
+          />
+        </React.Fragment>
       );
     } else {
       return <List />;
