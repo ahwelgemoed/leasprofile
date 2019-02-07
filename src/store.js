@@ -7,12 +7,12 @@ import { reduxFirestore, firestoreReducer } from 'redux-firestore';
 // My Reducers //
 // TODO
 const firebaseConfig = {
-  apiKey: "AIzaSyAHeJhaGSVYySm1PIeJ5WIco9Zty6Ppzus",
-  authDomain: "leasportfolio-c85d6.firebaseapp.com",
-  databaseURL: "https://leasportfolio-c85d6.firebaseio.com",
-  projectId: "leasportfolio-c85d6",
-  storageBucket: "",
-  messagingSenderId: "544623041812"
+  apiKey: 'AIzaSyAHeJhaGSVYySm1PIeJ5WIco9Zty6Ppzus',
+  authDomain: 'leasportfolio-c85d6.firebaseapp.com',
+  databaseURL: 'https://leasportfolio-c85d6.firebaseio.com',
+  projectId: 'leasportfolio-c85d6',
+  storageBucket: 'leasportfolio-c85d6.appspot.com',
+  messagingSenderId: '544623041812'
 };
 // react-redux-firebase config
 const rrfConfig = {
