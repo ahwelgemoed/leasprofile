@@ -98,6 +98,45 @@ class Project extends Component {
               height: '80vh'
             }}
           />
+
+          <Row>
+            {project.bodyImg.map((b, i) => {
+              const total = project.bodyImg.length;
+              const isTotalOdd = total % 2;
+              if (isTotalOdd === 1 && total === i + 1) {
+                return (
+                  <Col xs="12">
+                    <div
+                      className="banner_Img"
+                      style={{
+                        backgroundImage: `url(${b})`,
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
+                        height: '80vh'
+                      }}
+                    />
+                  </Col>
+                );
+              } else {
+                return (
+                  <Col xs="6" className="col6_noPadding">
+                    {' '}
+                    <div
+                      className="banner_Img"
+                      style={{
+                        backgroundImage: `url(${b})`,
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
+                        height: '80vh'
+                      }}
+                    />
+                  </Col>
+                );
+              }
+            })}
+          </Row>
         </React.Fragment>
       );
     } else {
