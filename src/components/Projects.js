@@ -17,10 +17,23 @@ import { firestoreConnect, firebaseConnect } from 'react-redux-firebase';
 
 class Projects extends Component {
   render() {
-    console.log(this.props.projects);
-    const { projects } = this.props;
+    console.log(this.props.auth);
+    const { projects, auth, firebase } = this.props;
     return (
       <div>
+        {auth.uid ? (
+          <React.Fragment>
+            <Link to="/upload/project/"> Upload</Link>
+            <Button
+              onClick={() => {
+                firebase.logout();
+              }}
+            >
+              {' '}
+              Logout
+            </Button>
+          </React.Fragment>
+        ) : null}
         <div class="card-columns">
           {projects ? (
             projects.map((project, i) => (
@@ -56,6 +69,7 @@ class Projects extends Component {
 export default compose(
   firestoreConnect([{ collection: 'projects' }]),
   connect((state, props) => ({
-    projects: state.firestore.ordered.projects
+    projects: state.firestore.ordered.projects,
+    auth: state.firebase.auth
   }))
 )(Projects);
