@@ -17,7 +17,9 @@ import { firestoreConnect, firebaseConnect } from 'react-redux-firebase';
 
 class Projects extends Component {
   render() {
-    console.log(this.props.auth);
+    if (this.props.projects) {
+      console.log(this.props.projects.flatMap());
+    }
     const { projects, auth, firebase } = this.props;
     return (
       <div>
@@ -37,7 +39,7 @@ class Projects extends Component {
         <div class="card-columns">
           {projects ? (
             projects.map((project, i) => (
-              <React.Fragment>
+              <React.Fragment key={i}>
                 <Link to={`/project/${project.id}`}>
                   <div className="card text-white">
                     <img className="myImg" src={project.BannerImg} />

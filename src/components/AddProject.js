@@ -15,13 +15,16 @@ class AddProject extends Component {
     subTitle: '',
     BannerImg: '',
     bodyImg: [],
-    People: []
+    People: [],
+    progress: 0
   };
   inputChange = e => {
     this.setState({
       [e.target.name]: e.target.value
     });
   };
+  handleProgress = progress => this.setState({ progress });
+
   onaddPersonSubmit = () => {
     this.setState({
       People: [...this.state.People, this.state.person],
@@ -98,12 +101,10 @@ class AddProject extends Component {
         },
         newProject
       )
-      .then(() => console.log('Saved'));
+      .then(() => console.log('Saved'))
+      .then(() => this.props.history.push('/'));
   };
   render() {
-    console.log(this.props.firestore);
-    console.log(this.state);
-
     return (
       <div style={{ zIndex: '99' }}>
         <Container>
@@ -182,9 +183,14 @@ class AddProject extends Component {
                   onChange={this.inputChange}
                   value={this.state.body}
                 />
-                <Col sm={12}>
+                <Col sm={24}>
                   <label htmlFor="body">Body Images</label>
+                  <span class="badge badge-secondary">
+                    {this.state.progress}
+                  </span>
+
                   <FileUpload
+                    onProgress={this.handleProgress}
                     className="btn btn-info"
                     accept="image/*"
                     multiple
@@ -192,8 +198,9 @@ class AddProject extends Component {
                     onUploadSuccess={this.handleUploadSuccess}
                   />
                 </Col>
-                <Col sm={12}>
+                <Col sm={24}>
                   <label htmlFor="body">Upload Feature Image</label>
+
                   <FileUpload
                     className="btn btn-info"
                     accept="image/*"
