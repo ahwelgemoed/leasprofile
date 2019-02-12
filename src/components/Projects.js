@@ -17,9 +17,6 @@ import { firestoreConnect, firebaseConnect } from 'react-redux-firebase';
 
 class Projects extends Component {
   render() {
-    if (this.props.projects) {
-      console.log(this.props.projects.flatMap());
-    }
     const { projects, auth, firebase } = this.props;
     return (
       <div>
