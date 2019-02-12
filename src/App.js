@@ -5,6 +5,7 @@ import { Container, Row, Col } from 'reactstrap';
 import Header from './components/Header';
 import Projects from './components/Projects';
 import AddProject from './components/AddProject';
+import Footer from './components/Footer';
 import Homer from './components/Homer';
 import Project from './components/Project';
 import Login from './components/auth/Login';
@@ -28,6 +29,7 @@ class App extends Component {
                 component={UserIsAuthenticated(AddProject)}
               />
             </Switch>
+            <Footer />
           </React.Fragment>
         </Router>
       </Provider>

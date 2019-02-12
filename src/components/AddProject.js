@@ -7,7 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 class AddProject extends Component {
   state = {
-    title: '',
+    Title: '',
     Body: '',
     person: [],
     Technology: [],
@@ -72,7 +72,7 @@ class AddProject extends Component {
   onSubmit = e => {
     e.preventDefault();
     const {
-      title,
+      Title,
       Body,
       Technologys,
       subTitle,
@@ -81,7 +81,7 @@ class AddProject extends Component {
       People
     } = this.state;
     const newProject = {
-      title,
+      Title,
       Body,
       Technology: Technologys,
       People,
@@ -117,9 +117,9 @@ class AddProject extends Component {
                   placeholder="Title"
                   className="form-control form-control-sm"
                   type="text"
-                  name="title"
+                  name="Title"
                   onChange={this.inputChange}
-                  value={this.state.title}
+                  value={this.state.Title}
                 />
                 <label htmlFor="Sub-Title">Sub-Title</label>
                 <input
