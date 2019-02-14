@@ -16,6 +16,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { List } from 'react-content-loader';
 import { firestoreConnect, firebaseConnect } from 'react-redux-firebase';
+import Next from './Next';
 
 class Project extends Component {
   constructor(props) {
@@ -40,7 +41,13 @@ class Project extends Component {
           <div className="home_header_banner">
             <Container>
               <Navbar light expand="md">
-                <NavbarBrand href="/">'Go Back'</NavbarBrand>
+                <NavbarBrand
+                  className="back"
+                  onClick={() => this.props.history.push('/')}
+                >
+                  <i className="fas fa-long-arrow-alt-left" />
+                  take a step back
+                </NavbarBrand>
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse className="kykNet" isOpen={this.state.isOpen} navbar>
                   <Nav className="ml-auto" navbar>
@@ -137,6 +144,7 @@ class Project extends Component {
               }
             })}
           </Row>
+          <Next chosen={project.id} />
         </React.Fragment>
       );
     } else {
