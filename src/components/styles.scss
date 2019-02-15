@@ -158,3 +158,49 @@ i {
   font-family: 'Muli', sans-serif;
   font-size: 12px !important;
 }
+.nextCard {
+  background: #faf0ea;
+  height: 20vh;
+}
+
+.centers {
+  height: 20vh;
+  background: #faf0ea;
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+  align-items: center;
+
+  h3 {
+    font-size: 16px !important;
+    font-family: 'Muli', sans-serif;
+  }
+}
+.prev {
+  text-align: center;
+  span {
+    font-size: 12px !important;
+    text-align: center;
+    p {
+      margin: 0;
+      color: #fe5500 !important;
+    }
+    i {
+      color: #fe5500 !important;
+    }
+  }
+}
+.nexty {
+  text-align: center;
+  span {
+    i {
+      color: #fe5500 !important;
+    }
+    p {
+      margin: 0;
+      color: #fe5500 !important;
+    }
+    font-size: 12px !important;
+    text-align: center;
+  }
+}

@@ -17,6 +17,7 @@ import { Link } from 'react-router-dom';
 import { List } from 'react-content-loader';
 import { firestoreConnect, firebaseConnect } from 'react-redux-firebase';
 import Next from './Next';
+import { log } from 'handlebars';
 
 class Project extends Component {
   constructor(props) {
@@ -24,6 +25,7 @@ class Project extends Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
+      loading: true,
       isOpen: false
     };
   }
@@ -32,10 +34,19 @@ class Project extends Component {
       isOpen: !this.state.isOpen
     });
   }
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.project !== this.props.project) {
+      console.log(this.props.project);
+      this.setState({
+        loading: false
+      });
+    }
+  }
   render() {
     const { project } = this.props;
-    console.log(project);
-    if (project) {
+    const { loading } = this.state;
+
+    if (!loading) {
       return (
         <React.Fragment>
           <div className="home_header_banner">
