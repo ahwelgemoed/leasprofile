@@ -155,7 +155,7 @@ class Project extends Component {
               }
             })}
           </Row>
-          <Next chosen={project.id} />
+          {/* <Next chosen={project.id} /> */}
         </React.Fragment>
       );
     } else {

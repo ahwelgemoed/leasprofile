@@ -7,6 +7,7 @@ import {
   Nav,
   NavItem,
   NavLink,
+  Col,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -33,7 +34,7 @@ export default class Header extends Component {
   }
   render() {
     return (
-      <div className="home_header_banner">
+      <div className="home_header_banner_Home">
         <Container>
           <Navbar light expand="md">
             <NavbarBrand href="/">Leandra de Sousa</NavbarBrand>
@@ -56,17 +57,23 @@ export default class Header extends Component {
               </Nav>
             </Collapse>
           </Navbar>
-          <div className="Header_Body">
-            <h3>
-              Hi, I’m Lea, a digital designer with a strong focus on UI/UX.
-            </h3>
-
-            <p>
-              I create unique and memorable experiences for people. I’m driven
-              by an interest in human behaviour & curiousity and a lifelong
-              desire to help others.
-            </p>
-          </div>
+          <Row>
+            <Col xs="6">
+              <div className="Header_Body_Col">
+                <h3>
+                  Hi, I’m Lea, a digital designer with a strong focus on UI/UX.
+                </h3>
+                <Col xs="12">
+                  <div className="arbit" />
+                </Col>
+                <p>
+                  I create unique and memorable experiences for people. I’m
+                  driven by an interest in human behaviour & curiousity and a
+                  lifelong desire to help others.
+                </p>
+              </div>
+            </Col>
+          </Row>
         </Container>
       </div>
     );
