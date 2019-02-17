@@ -15,8 +15,13 @@ import {
   Row,
   Container
 } from 'reactstrap';
+import styled, { ThemeProvider, injectGlobal } from 'styled-components';
 import { styles } from 'ansi-colors';
 import './styles.scss';
+
+const Ieader = styled.div`
+  background: ${props => props.theme.backColor};
+`;
 
 export default class Header extends Component {
   constructor(props) {
@@ -34,7 +39,7 @@ export default class Header extends Component {
   }
   render() {
     return (
-      <div className="home_header_banner_Home">
+      <Ieader className="home_header_banner_Home">
         <Container>
           <Navbar light expand="md">
             <NavbarBrand href="/">Leandra de Sousa</NavbarBrand>
@@ -75,7 +80,7 @@ export default class Header extends Component {
             </Col>
           </Row>
         </Container>
-      </div>
+      </Ieader>
     );
   }
 }

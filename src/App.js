@@ -12,27 +12,36 @@ import Login from './components/auth/Login';
 // Redux //
 import { Provider } from 'react-redux';
 import store from './store';
+import styled, { ThemeProvider, injectGlobal } from 'styled-components';
+
+const theme = {
+  backColor: '#EAF6FA'
+};
 
 class App extends Component {
   render() {
+    console.log(this.props);
+
     return (
-      <Provider store={store}>
-        <Router>
-          <React.Fragment>
-            <Switch>
-              <Route exact path="/" component={Homer} />
-              <Route exact path="/leaslogin" component={Login} />
-              <Route path="/project/:id" exact component={Project} />
-              <Route
-                path="/upload/project/"
-                exact
-                component={UserIsAuthenticated(AddProject)}
-              />
-            </Switch>
-            <Footer />
-          </React.Fragment>
-        </Router>
-      </Provider>
+      <ThemeProvider theme={theme}>
+        <Provider store={store}>
+          <Router>
+            <React.Fragment>
+              <Switch>
+                <Route exact path="/" component={Homer} />
+                <Route exact path="/leaslogin" component={Login} />
+                <Route path="/project/:id" exact component={Project} />
+                <Route
+                  path="/upload/project/"
+                  exact
+                  component={UserIsAuthenticated(AddProject)}
+                />
+              </Switch>
+              <Footer />
+            </React.Fragment>
+          </Router>
+        </Provider>
+      </ThemeProvider>
     );
   }
 }

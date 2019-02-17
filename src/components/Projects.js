@@ -16,10 +16,46 @@ import { List } from 'react-content-loader';
 import { firestoreConnect, firebaseConnect } from 'react-redux-firebase';
 
 class Projects extends Component {
+  state = { loading: true, uniqButton: null };
+  uniq = a => {
+    let arry = [];
+    a.map((project, i) => project.Technology.map((t, i) => arry.push(t)));
+    // arry.push(project.Technology)
+    console.log(arry);
+    let uniq = [...new Set(arry)];
+    console.log(uniq);
+    this.setState({
+      uniqButton: uniq,
+      loading: false
+    });
+  };
+  filter = tech => {
+    const { projects } = this.props;
+    // const result = projects.filter(project => project.Technology == tech);
+    let arry = [];
+
+    const result = projects.map(p => arry.push([p]));
+    console.log(result);
+    console.log(arry);
+  };
+
   render() {
     const { projects, auth, firebase } = this.props;
+    const { loading, uniqButton } = this.state;
+    console.log(projects);
+    console.log(this.props);
+
     return (
       <div>
+        {projects && loading ? this.uniq(projects) : null}
+        {uniqButton
+          ? uniqButton.map(button => (
+              <li key={button} onClick={this.filter.bind(this, button)}>
+                {button}
+              </li>
+            ))
+          : null}
+
         {auth.uid ? (
           <React.Fragment>
             <Link to="/upload/project/"> Upload</Link>
