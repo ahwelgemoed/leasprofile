@@ -1,21 +1,5 @@
 import React, { Component } from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  Container,
-  Row,
-  Col
-} from 'reactstrap';
-import { compose } from 'redux';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { List } from 'react-content-loader';
-import { firestoreConnect, firebaseConnect } from 'react-redux-firebase';
+import { firebaseConnect } from 'react-redux-firebase';
 
 class Login extends Component {
   state = { email: '', password: '' };

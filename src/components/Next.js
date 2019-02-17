@@ -1,22 +1,10 @@
 import React, { Component } from 'react';
-import {
-  Card,
-  Button,
-  CardImg,
-  CardTitle,
-  CardText,
-  CardColumns,
-  CardSubtitle,
-  CardBody,
-  Row,
-  Col
-} from 'reactstrap';
+import { Col } from 'reactstrap';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { List } from 'react-content-loader';
-import { firestoreConnect, firebaseConnect } from 'react-redux-firebase';
-var nexty = null;
+import {} from 'react-content-loader';
+import { firestoreConnect } from 'react-redux-firebase';
 
 class Next extends Component {
   state = { nexty: null, prevy: null, loading: false };
@@ -40,15 +28,14 @@ class Next extends Component {
   };
 
   render() {
-    const { projects, chosen } = this.props;
+    const { projects } = this.props;
     const { loading, nexty, prevy } = this.state;
-    console.log(this.state);
 
     return (
       <div>
         {projects && !loading ? this.next() : null}
         {loading ? (
-          <div class="row centers py-2">
+          <div className="row centers py-2">
             {loading && projects[prevy] ? (
               <Link to={`/project/${projects[prevy].id}`}>
                 <div className="col-6 prev">

@@ -42,7 +42,7 @@ class AddProject extends Component {
     this.setState({
       image: filename
     });
-    const { firestore } = this.props;
+
     firebase
       .storage()
       .ref('images')
@@ -59,7 +59,7 @@ class AddProject extends Component {
     this.setState({
       image: filename
     });
-    const { firestore } = this.props;
+
     firebase
       .storage()
       .ref('images')
@@ -112,7 +112,7 @@ class AddProject extends Component {
           <Row>
             <Col sm={12}>
               <h1>Add Poem</h1>
-              <div class="form-group">
+              <div className="form-group">
                 <label htmlFor="Title">Title</label>
                 <input
                   placeholder="Title"
@@ -185,7 +185,7 @@ class AddProject extends Component {
                 />
                 <Col sm={24}>
                   <label htmlFor="body">Body Images</label>
-                  <span class="badge badge-secondary">
+                  <span className="badge badge-secondary">
                     {this.state.progress}
                   </span>
 

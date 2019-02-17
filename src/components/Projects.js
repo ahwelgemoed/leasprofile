@@ -1,19 +1,27 @@
 import React, { Component } from 'react';
-import {
-  Card,
-  Button,
-  CardImg,
-  CardTitle,
-  CardText,
-  CardColumns,
-  CardSubtitle,
-  CardBody
-} from 'reactstrap';
+import { Button } from 'reactstrap';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { List } from 'react-content-loader';
-import { firestoreConnect, firebaseConnect } from 'react-redux-firebase';
+import { firestoreConnect } from 'react-redux-firebase';
+import styled from 'styled-components';
+
+const OverSlay = styled.div`
+  background: ${props => props.theme.backgroundColor};
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+`;
+const Fontsyt = styled.div`
+  color: ${props => props.theme.highLight};
+`;
 
 class Projects extends Component {
   state = { loading: true, uniqButton: null };
@@ -21,40 +29,33 @@ class Projects extends Component {
     let arry = [];
     a.map((project, i) => project.Technology.map((t, i) => arry.push(t)));
     // arry.push(project.Technology)
-    console.log(arry);
     let uniq = [...new Set(arry)];
-    console.log(uniq);
     this.setState({
       uniqButton: uniq,
       loading: false
     });
   };
-  filter = tech => {
-    const { projects } = this.props;
-    // const result = projects.filter(project => project.Technology == tech);
-    let arry = [];
-
-    const result = projects.map(p => arry.push([p]));
-    console.log(result);
-    console.log(arry);
-  };
+  // filter = tech => {
+  //   const { projects } = this.props;
+  //   // const result = projects.filter(project => project.Technology == tech);
+  //   let arry = [];
+  //   const result = projects.map(p => arry.push([p]));
+  // };
 
   render() {
     const { projects, auth, firebase } = this.props;
-    const { loading, uniqButton } = this.state;
-    console.log(projects);
-    console.log(this.props);
+    const { loading } = this.state;
 
     return (
       <div>
         {projects && loading ? this.uniq(projects) : null}
-        {uniqButton
+        {/* {uniqButton
           ? uniqButton.map(button => (
               <li key={button} onClick={this.filter.bind(this, button)}>
                 {button}
               </li>
             ))
-          : null}
+          : null} */}
 
         {auth.uid ? (
           <React.Fragment>
@@ -69,19 +70,23 @@ class Projects extends Component {
             </Button>
           </React.Fragment>
         ) : null}
-        <div class="card-columns">
+        <div className="card-columns">
           {projects ? (
             projects.map((project, i) => (
               <React.Fragment key={i}>
                 <Link to={`/project/${project.id}`}>
                   <div className="card text-white">
-                    <img className="myImg" src={project.BannerImg} />
-                    <div class="overlay" style={{ background: '#faf0ea' }}>
-                      <div class="text">
+                    <img
+                      className="myImg"
+                      src={project.BannerImg}
+                      alt={'BannerImg'}
+                    />
+                    <OverSlay className="overlay">
+                      <Fontsyt className="text">
                         <h5 className="card-title">{project.Title}</h5>
                         <p className="card-text">{project.subTitle}</p>
-                      </div>
-                    </div>
+                      </Fontsyt>
+                    </OverSlay>
                   </div>
                 </Link>
               </React.Fragment>

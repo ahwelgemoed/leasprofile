@@ -3,7 +3,6 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
   NavLink,
@@ -13,11 +12,31 @@ import {
 } from 'reactstrap';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { List } from 'react-content-loader';
-import { firestoreConnect, firebaseConnect } from 'react-redux-firebase';
-import Next from './Next';
-import { log } from 'handlebars';
+import { firestoreConnect } from 'react-redux-firebase';
+
+import styled from 'styled-components';
+
+const Ieader = styled.div`
+  background: ${props => props.theme.backgroundColor};
+`;
+const Marky = styled.mark`
+  color: ${props => props.theme.highLight};
+  background: ${props => props.theme.backgroundColor};
+  padding: 0;
+`;
+const Backky = styled.div`
+  color: ${props => props.theme.highLight};
+  background: ${props => props.theme.backgroundColor};
+  padding: 0;
+`;
+const Parrie = styled.p`
+  border-right: 3px ${props => props.theme.highLight} solid;
+`;
+const Bordery = styled.div`
+  border-top: 2.5px ${props => props.theme.highLight} solid;
+  width: 20%;
+`;
 
 class Project extends Component {
   constructor(props) {
@@ -36,7 +55,6 @@ class Project extends Component {
   }
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.project !== this.props.project) {
-      console.log(this.props.project);
       this.setState({
         loading: false
       });
@@ -49,16 +67,16 @@ class Project extends Component {
     if (!loading) {
       return (
         <React.Fragment>
-          <div className="home_header_banner">
+          <Ieader className="home_header_banner">
             <Container>
               <Navbar light expand="md">
-                <NavbarBrand
+                <Backky
                   className="back"
                   onClick={() => this.props.history.push('/')}
                 >
                   <i className="fas fa-long-arrow-alt-left" />
                   take a step back
-                </NavbarBrand>
+                </Backky>
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse className="kykNet" isOpen={this.state.isOpen} navbar>
                   <Nav className="ml-auto" navbar>
@@ -82,29 +100,35 @@ class Project extends Component {
                 <Col xs="6">
                   <div className="Header_Body_Col">
                     <h3>{project.Title}</h3>
-                    <Col xs="12">
-                      <div className="arbit" />
-                    </Col>
-
+                    <Bordery xs="12">
+                      {/* <Bordery className="arbit" /> */}
+                    </Bordery>
                     <p>{project.Body}</p>
                   </div>
                 </Col>
                 <Col xs="6" className="Header_Body_Col">
                   <span>
-                    {project.Technology.map((t, i) => (
-                      <span key={i}>{t} </span>
-                    ))}
+                    {project.Technology.map((t, i) => {
+                      let totals = project.Technology.length - 1;
+                      if (totals === i) {
+                        return <span key={i}> {t} </span>;
+                      } else {
+                        return <span key={i}> / {t} </span>;
+                      }
+                    })}
                   </span>
                   <div className="people">
-                    <h2>team members</h2>
+                    <h2>
+                      <Marky>team members</Marky>
+                    </h2>
                     {project.People.map((p, i) => (
-                      <p key={i}> {p}</p>
+                      <Parrie key={i}> {p}</Parrie>
                     ))}
                   </div>
                 </Col>
               </Row>
             </Container>
-          </div>
+          </Ieader>
 
           <div
             className="banner_Img"
@@ -123,7 +147,7 @@ class Project extends Component {
               const isTotalOdd = total % 2;
               if (isTotalOdd === 1 && total === i + 1) {
                 return (
-                  <Col xs="12">
+                  <Col key={i} xs="12">
                     <div
                       className="banner_Img"
                       style={{
@@ -159,7 +183,32 @@ class Project extends Component {
         </React.Fragment>
       );
     } else {
-      return <List />;
+      return (
+        <React.Fragment>
+          <Row>
+            <Col xs="6">
+              <div className="card text-white">
+                <List />
+              </div>
+            </Col>{' '}
+            <Col xs="6">
+              <div className="card text-white">
+                <List />
+              </div>
+            </Col>
+            <Col xs="6">
+              <div className="card text-white">
+                <List />
+              </div>
+            </Col>
+            <Col xs="6">
+              <div className="card text-white">
+                <List />
+              </div>
+            </Col>
+          </Row>
+        </React.Fragment>
+      );
     }
   }
 }

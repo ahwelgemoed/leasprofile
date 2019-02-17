@@ -8,19 +8,23 @@ import {
   NavItem,
   NavLink,
   Col,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
   Row,
   Container
 } from 'reactstrap';
-import styled, { ThemeProvider, injectGlobal } from 'styled-components';
-import { styles } from 'ansi-colors';
 import './styles.scss';
+import styled from 'styled-components';
 
 const Ieader = styled.div`
-  background: ${props => props.theme.backColor};
+  background: ${props => props.theme.backgroundColor};
+`;
+const Marky = styled.mark`
+  color: ${props => props.theme.highLight};
+  background: ${props => props.theme.backgroundColor};
+  padding: 0;
+`;
+const Bordery = styled.div`
+  border-top: 2.5px ${props => props.theme.highLight} solid;
+  width: 20%;
 `;
 
 export default class Header extends Component {
@@ -65,12 +69,11 @@ export default class Header extends Component {
           <Row>
             <Col xs="6">
               <div className="Header_Body_Col">
-                <h3>
-                  Hi, I’m Lea, a digital designer with a strong focus on UI/UX.
+                <h3 style={{ paddingBottom: '20px' }}>
+                  Hi, I’m Lea, a <Marky>digital designer</Marky> with a strong
+                  focus on <Marky>UI/UX.</Marky>
                 </h3>
-                <Col xs="12">
-                  <div className="arbit" />
-                </Col>
+                <Bordery xs="12">{/* <Bordery className="arbit" /> */}</Bordery>
                 <p>
                   I create unique and memorable experiences for people. I’m
                   driven by an interest in human behaviour & curiousity and a

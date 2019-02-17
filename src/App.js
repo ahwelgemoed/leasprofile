@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { UserIsAuthenticated, UserIsNotAuthenticated } from './helpers';
-import { Container, Row, Col } from 'reactstrap';
-import Header from './components/Header';
-import Projects from './components/Projects';
+import { UserIsAuthenticated } from './helpers';
 import AddProject from './components/AddProject';
 import Footer from './components/Footer';
 import Homer from './components/Homer';
@@ -12,18 +9,36 @@ import Login from './components/auth/Login';
 // Redux //
 import { Provider } from 'react-redux';
 import store from './store';
-import styled, { ThemeProvider, injectGlobal } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 
-const theme = {
-  backColor: '#EAF6FA'
+const defaults = {
+  backgroundColor: '#FAF0EA',
+  highLight: '#FB5615'
 };
+const blue = {
+  backgroundColor: '#EAF6FA',
+  highLight: '#2E00BE'
+};
+const green = {
+  backgroundColor: '#E8F7E9',
+  highLight: '#2E00BE'
+};
+const yellow = {
+  backgroundColor: '#FFFAE5',
+  highLight: '#A43D11'
+};
+const red = {
+  backgroundColor: '#FFEFEF',
+  highLight: '#F20825'
+};
+const themes = [red, blue, yellow, green, defaults];
+// Randomizes the Themes on load
+const rand = themes[Math.floor(Math.random() * themes.length)];
 
 class App extends Component {
   render() {
-    console.log(this.props);
-
     return (
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={rand}>
         <Provider store={store}>
           <Router>
             <React.Fragment>
