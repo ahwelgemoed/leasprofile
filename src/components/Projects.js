@@ -100,10 +100,10 @@ class Projects extends Component {
             ))
           ) : (
             <React.Fragment>
-              <div className="card text-white">
+              <div className="card ">
                 <List />
               </div>
-              <div className="card text-white">
+              <div className="card">
                 <List />
               </div>
             </React.Fragment>
