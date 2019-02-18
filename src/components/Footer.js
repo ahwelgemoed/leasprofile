@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Footsy = styled.footer`
-  background: ${props => props.theme.backgroundColor};
+  background: #fe5500;
 `;
 
 var d = new Date();

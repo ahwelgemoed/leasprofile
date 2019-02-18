@@ -43,25 +43,21 @@ export default class Header extends Component {
   }
   render() {
     return (
-      <Ieader className="home_header_banner_Home">
+      <Ieader className="home_header_banner">
         <Container>
           <Navbar light expand="md">
-            <NavbarBrand href="/">Leandra de Sousa</NavbarBrand>
+            <NavbarBrand href="#">Leandra de Sousa</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse className="kykNet" isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink href="/components/">Projects</NavLink>
+                  <NavLink href="#projects">Projects</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="https://github.com/reactstrap/reactstrap">
-                    Resume
-                  </NavLink>
+                  <NavLink href="#">Resume</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="https://github.com/reactstrap/reactstrap">
-                    Get in Touch
-                  </NavLink>
+                  <NavLink href="#callMe">Get in Touch</NavLink>
                 </NavItem>
               </Nav>
             </Collapse>

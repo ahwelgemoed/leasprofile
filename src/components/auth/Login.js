@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { firebaseConnect } from 'react-redux-firebase';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 class Login extends Component {
   state = { email: '', password: '' };
@@ -17,6 +19,8 @@ class Login extends Component {
         email,
         password
       })
+      .then(toast('Feture Image Uploaded'))
+      .then(this.props.history.push('/'))
       .catch(err => alert('Invalid Login'));
   };
   render() {

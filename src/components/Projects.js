@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Button } from 'reactstrap';
+import { Button, ButtonGroup } from 'reactstrap';
+import Contact from './Contact';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -56,20 +57,26 @@ class Projects extends Component {
               </li>
             ))
           : null} */}
-
-        {auth.uid ? (
-          <React.Fragment>
-            <Link to="/upload/project/"> Upload</Link>
-            <Button
-              onClick={() => {
-                firebase.logout();
-              }}
-            >
-              {' '}
-              Logout
-            </Button>
-          </React.Fragment>
-        ) : null}
+        <div className="sticky-top">
+          {auth.uid ? (
+            <React.Fragment>
+              <ButtonGroup>
+                <Link className="btn btn-info" to="/upload/project/">
+                  {' '}
+                  Upload
+                </Link>
+                <Button
+                  onClick={() => {
+                    firebase.logout();
+                  }}
+                >
+                  {' '}
+                  Logout
+                </Button>
+              </ButtonGroup>
+            </React.Fragment>
+          ) : null}
+        </div>
         <div className="card-columns">
           {projects ? (
             projects.map((project, i) => (

@@ -102,6 +102,7 @@ class AddProject extends Component {
         newProject
       )
       .then(() => console.log('Saved'))
+      .then(toast('Saved'))
       .then(() => this.props.history.push('/'));
   };
   render() {
@@ -183,7 +184,7 @@ class AddProject extends Component {
                   onChange={this.inputChange}
                   value={this.state.body}
                 />
-                <Col sm={24}>
+                <Col sm={24} className="colPadd">
                   <label htmlFor="body">Body Images</label>
                   <span className="badge badge-secondary">
                     {this.state.progress}
@@ -198,7 +199,7 @@ class AddProject extends Component {
                     onUploadSuccess={this.handleUploadSuccess}
                   />
                 </Col>
-                <Col sm={24}>
+                <Col sm={24} className="colPadd">
                   <label htmlFor="body">Upload Feature Image</label>
 
                   <FileUpload
@@ -209,7 +210,7 @@ class AddProject extends Component {
                   />
                 </Col>
                 <button onClick={this.onSubmit} className="btn btn-primary">
-                  SAve
+                  Save
                 </button>
               </div>
             </Col>

@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'GT Super Display';
+  font-style: normal;
+  font-weight: 400;
+  src: local('GT-Super-Display-Medium'), local('GT-Super-Display-Medium');
+  // url(../Font/Roboto-Regular.woff2) format('otf');
+}
+
 .home_header_banner_Home {
   width: 100vw;
   height: 60vh;
@@ -22,6 +30,7 @@
   top: 30vh;
   h3 {
     width: 40%;
+    font-family: 'GT Super Display', cursive;
   }
   p {
     width: 35%;
@@ -59,6 +68,9 @@
   p {
     // width: 35%;
     margin-top: 20px;
+  }
+  h3 {
+    font-family: 'GT Super Display', cursive;
   }
 }
 .people {
@@ -109,11 +121,11 @@
 }
 
 .card:hover .overlay {
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .text {
-  color: black;
+  color: white;
   font-size: 20px;
   position: absolute;
   top: 50%;
@@ -213,4 +225,14 @@ i {
 }
 .card {
   border: none !important;
+}
+.sticky-top {
+  padding: 30px;
+  // background: #f9f9f9;
+}
+.colPadd {
+  padding-top: 20px;
+}
+.navbar-light {
+  border: none;
 }
