@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { List } from 'react-content-loader';
 import { firestoreConnect } from 'react-redux-firebase';
+import { ToastContainer, toast } from 'react-toastify';
 import styled from 'styled-components';
 
 const OverSlay = styled.div`
@@ -43,6 +44,12 @@ class Projects extends Component {
   //   const result = projects.map(p => arry.push([p]));
   // };
 
+  Delete = id => {
+    const { firestore } = this.props;
+    firestore
+      .delete({ collection: 'projects', doc: id })
+      .then(toast('Deleted'));
+  };
   render() {
     const { projects, auth, firebase } = this.props;
     const { loading } = this.state;
@@ -81,6 +88,14 @@ class Projects extends Component {
           {projects ? (
             projects.map((project, i) => (
               <React.Fragment key={i}>
+                {auth.uid ? (
+                  <React.Fragment>
+                    <Button onClick={this.Delete.bind(this, project.id)}>
+                      {' '}
+                      Delete{' '}
+                    </Button>
+                  </React.Fragment>
+                ) : null}
                 <Link to={`/project/${project.id}`}>
                   <div className="card text-white">
                     <img
