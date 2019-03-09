@@ -1,0 +1,23 @@
+[debug] [2019-03-06T16:05:56.714Z] ----------------------------------------------------------------------
+[debug] [2019-03-06T16:05:56.718Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-03-06T16:05:56.719Z] CLI Version:   6.4.0
+[debug] [2019-03-06T16:05:56.719Z] Platform:      darwin
+[debug] [2019-03-06T16:05:56.719Z] Node Version:  v8.12.0
+[debug] [2019-03-06T16:05:56.720Z] Time:          Wed Mar 06 2019 18:05:56 GMT+0200 (SAST)
+[debug] [2019-03-06T16:05:56.720Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-03-06T16:05:56.741Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-03-06T16:05:56.742Z] > authorizing via signed-in user
+[debug] [2019-03-06T16:05:56.742Z] [iam] checking project leasportfolio-c85d6 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2019-03-06T16:05:56.748Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/leasportfolio-c85d6:testIamPermissions  
+
+[debug] [2019-03-06T16:05:59.248Z] <<< HTTP RESPONSE 200
+[debug] [2019-03-06T16:05:59.252Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/leasportfolio-c85d6  
+ 
+[debug] [2019-03-06T16:05:59.998Z] <<< HTTP RESPONSE 200
+[debug] [2019-03-06T16:07:15.161Z] TypeError: Cannot read property 'wanted' of undefined
+    at /usr/local/lib/node_modules/firebase-tools/lib/checkFirebaseSDKVersion.js:37:51
+    at <anonymous>
+    at process._tickDomainCallback (internal/process/next_tick.js:229:7)
+[error] 
+[error] Error: An unexpected error has occurred.
