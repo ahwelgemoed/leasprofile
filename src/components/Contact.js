@@ -33,7 +33,7 @@ export default class Contact extends Component {
       <Ieader className="home_header_banner_Home">
         <Container>
           <Row>
-            <Col xs="6">
+            <Col xs="12" lg="6">
               <div className="Header_Body_Col">
                 <h3 style={{ paddingBottom: '20px' }}>
                   Let’s create something great together.

@@ -63,7 +63,7 @@ export default class Header extends Component {
             </Collapse>
           </Navbar>
           <Row>
-            <Col xs="6">
+            <Col xs="12" lg="6">
               <div className="Header_Body_Col">
                 <h3 style={{ paddingBottom: '20px' }}>
                   Hi, I’m Lea, a <Marky>digital designer</Marky> with a strong

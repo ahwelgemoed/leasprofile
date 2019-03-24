@@ -236,3 +236,14 @@ i {
 .navbar-light {
   border: none;
 }
+.show {
+  height: 100vh;
+  font-size: 25px;
+  font-weight: 700;
+  .navbar-nav {
+    margin-top: 20px;
+  }
+}
+.navbar-toggler {
+  border: none !important;
+}

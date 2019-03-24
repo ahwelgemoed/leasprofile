@@ -112,7 +112,7 @@ class AddProject extends Component {
           <ToastContainer />
           <Row>
             <Col sm={12}>
-              <h1>Add Poem</h1>
+              <h1>Add Project</h1>
               <div className="form-group">
                 <label htmlFor="Title">Title</label>
                 <input

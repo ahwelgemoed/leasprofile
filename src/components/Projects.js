@@ -91,8 +91,7 @@ class Projects extends Component {
                 {auth.uid ? (
                   <React.Fragment>
                     <Button onClick={this.Delete.bind(this, project.id)}>
-                      {' '}
-                      Delete{' '}
+                      Delete
                     </Button>
                   </React.Fragment>
                 ) : null}

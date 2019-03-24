@@ -93,7 +93,7 @@ class Project extends Component {
                 </Collapse>
               </Navbar>
               <Row>
-                <Col xs="6">
+                <Col xs="12" lg="6">
                   <div className="Header_Body_Col">
                     <h3>{project.Title}</h3>
                     <Bordery xs="12">
@@ -102,7 +102,7 @@ class Project extends Component {
                     <p>{project.Body}</p>
                   </div>
                 </Col>
-                <Col xs="6" className="Header_Body_Col">
+                <Col xs="12" lg="6" className="Header_Body_Col">
                   <span>
                     {project.Technology.map((t, i) => {
                       let totals = project.Technology.length - 1;
@@ -113,14 +113,16 @@ class Project extends Component {
                       }
                     })}
                   </span>
-                  <div className="people">
-                    <h2>
-                      <Marky>team members</Marky>
-                    </h2>
-                    {project.People.map((p, i) => (
-                      <Parrie key={i}> {p}</Parrie>
-                    ))}
-                  </div>
+                  {project.People.length ? (
+                    <div className="people">
+                      <h2>
+                        <Marky>team members</Marky>
+                      </h2>
+                      {project.People.map((p, i) => (
+                        <Parrie key={i}> {p}</Parrie>
+                      ))}
+                    </div>
+                  ) : null}
                 </Col>
               </Row>
             </Container>
@@ -158,7 +160,7 @@ class Project extends Component {
                 );
               } else {
                 return (
-                  <Col xs="6" className="col6_noPadding">
+                  <Col xs="12" lg="6" className="col6_noPadding">
                     {' '}
                     <div
                       className="banner_Img"
