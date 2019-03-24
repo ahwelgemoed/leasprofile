@@ -23,8 +23,8 @@ const Marky = styled.mark`
   padding: 0;
 `;
 const Bordery = styled.div`
-  border-top: 2.5px ${props => props.theme.highLight} solid;
-  width: 20%;
+  border-top: 3px ${props => props.theme.highLight} solid;
+  width: 15%;
 `;
 
 export default class Header extends Component {

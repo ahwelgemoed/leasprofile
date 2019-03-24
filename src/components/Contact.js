@@ -41,7 +41,22 @@ export default class Contact extends Component {
                 <Bordery xs="12">{/* <Bordery className="arbit" /> */}</Bordery>
                 <p>
                   I’m always on the lookout for a new adventure. Let’s get in
-                  touch - drop me a mail, give me call or just say hi.
+                  touch - drop me a{' '}
+                  <a
+                    href="mailto:slea.desousa@hotmail.com?Subject=Hello%20again"
+                    target="_top"
+                  >
+                    mail
+                  </a>
+                  , give me <a href="tel:+27815000896">call</a>
+                  or just{' '}
+                  <a
+                    target="_blank"
+                    href="https://www.instagram.com/leadesousa/"
+                  >
+                    say hi
+                  </a>
+                  .
                 </p>
               </div>
             </Col>

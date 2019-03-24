@@ -8,7 +8,7 @@
 
 .home_header_banner_Home {
   width: 100vw;
-  height: 60vh;
+  // height: 60vh;
   // background: #faf0ea;
 }
 .home_header_banner {
@@ -46,7 +46,8 @@
 }
 .Header_Body_Col {
   // position: absolute;
-  padding-top: 20vh;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
   .col-12 {
     width: 100px;
     height: 5px;
@@ -96,11 +97,9 @@
   // background: #faf0ea;
 }
 .card-img {
-  opacity: 1;
+  opacity: 0.8;
 }
-// .card-img {
-//   opacity: 0.4;
-// }
+
 .card-img-overlay {
   // opacity: 0.4;
 }
@@ -121,7 +120,7 @@
 }
 
 .card:hover .overlay {
-  opacity: 1;
+  opacity: 0.8;
 }
 
 .text {
@@ -246,4 +245,23 @@ i {
 }
 .navbar-toggler {
   border: none !important;
+}
+.navbar {
+  padding-top: 20px !important;
+}
+
+.nav-link {
+  color: black !important;
+  &:hover {
+    color: rgba(0, 0, 0, 0.7) !important;
+  }
+}
+.navbar-brand {
+  letter-spacing: 0.6px;
+}
+.fab {
+  font-size: 16px;
+}
+h3 {
+  margin-bottom: 0px !important;
 }

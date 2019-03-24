@@ -24,9 +24,6 @@ export default function Footer() {
                   <i className="fab fa-instagram" />
                 </span>
                 <span>
-                  <i className="fab fa-twitter" />
-                </span>
-                <span>
                   <i className="fab fa-pinterest-p" />
                 </span>
               </h6>

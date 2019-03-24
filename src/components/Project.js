@@ -93,7 +93,7 @@ class Project extends Component {
                 </Collapse>
               </Navbar>
               <Row>
-                <Col xs="12" lg="6">
+                <Col xs="12" md="6" lg="6">
                   <div className="Header_Body_Col">
                     <h3>{project.Title}</h3>
                     <Bordery xs="12">
@@ -102,7 +102,7 @@ class Project extends Component {
                     <p>{project.Body}</p>
                   </div>
                 </Col>
-                <Col xs="12" lg="6" className="Header_Body_Col">
+                <Col xs="12" lg="6" md="6" className="Header_Body_Col">
                   <span>
                     {project.Technology.map((t, i) => {
                       let totals = project.Technology.length - 1;
