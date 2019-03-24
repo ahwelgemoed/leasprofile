@@ -34,8 +34,8 @@ const Parrie = styled.p`
   border-right: 3px ${props => props.theme.highLight} solid;
 `;
 const Bordery = styled.div`
-  border-top: 2.5px ${props => props.theme.highLight} solid;
-  width: 20%;
+  border-top: 3px ${props => props.theme.highLight} solid;
+  width: 15%;
 `;
 
 class Project extends Component {
@@ -134,8 +134,8 @@ class Project extends Component {
               backgroundImage: `url(${project.BannerImg})`,
               backgroundPosition: 'center',
               backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat',
-              height: '80vh'
+              backgroundRepeat: 'no-repeat'
+              // height: '80vh'
             }}
           />
 

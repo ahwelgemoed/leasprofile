@@ -48,8 +48,7 @@ export default class Contact extends Component {
                   >
                     mail
                   </a>
-                  , give me <a href="tel:+27815000896">call</a>
-                  or just{' '}
+                  , give me <a href="tel:+27815000896">call</a> or just{' '}
                   <a
                     target="_blank"
                     href="https://www.instagram.com/leadesousa/"
