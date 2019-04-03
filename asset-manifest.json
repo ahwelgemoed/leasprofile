@@ -1,15 +1,15 @@
 {
-  "main.css": "/ahwelgemoed/leasprofile/static/css/main.c01df495.chunk.css",
-  "main.js": "/ahwelgemoed/leasprofile/static/js/main.079ba3fa.chunk.js",
-  "main.js.map": "/ahwelgemoed/leasprofile/static/js/main.079ba3fa.chunk.js.map",
-  "static/css/1.584590d0.chunk.css": "/ahwelgemoed/leasprofile/static/css/1.584590d0.chunk.css",
-  "static/js/1.3845d678.chunk.js": "/ahwelgemoed/leasprofile/static/js/1.3845d678.chunk.js",
-  "static/js/1.3845d678.chunk.js.map": "/ahwelgemoed/leasprofile/static/js/1.3845d678.chunk.js.map",
-  "runtime~main.js": "/ahwelgemoed/leasprofile/static/js/runtime~main.3f570775.js",
-  "runtime~main.js.map": "/ahwelgemoed/leasprofile/static/js/runtime~main.3f570775.js.map",
-  "static/css/1.584590d0.chunk.css.map": "/ahwelgemoed/leasprofile/static/css/1.584590d0.chunk.css.map",
-  "static/css/main.c01df495.chunk.css.map": "/ahwelgemoed/leasprofile/static/css/main.c01df495.chunk.css.map",
-  "index.html": "/ahwelgemoed/leasprofile/index.html",
-  "precache-manifest.eb81a3e87d4b8702095ecf802dc39b9b.js": "/ahwelgemoed/leasprofile/precache-manifest.eb81a3e87d4b8702095ecf802dc39b9b.js",
-  "service-worker.js": "/ahwelgemoed/leasprofile/service-worker.js"
+  "main.css": "/leasprofile/static/css/main.c01df495.chunk.css",
+  "main.js": "/leasprofile/static/js/main.686c5be6.chunk.js",
+  "main.js.map": "/leasprofile/static/js/main.686c5be6.chunk.js.map",
+  "static/css/1.584590d0.chunk.css": "/leasprofile/static/css/1.584590d0.chunk.css",
+  "static/js/1.51d0aa16.chunk.js": "/leasprofile/static/js/1.51d0aa16.chunk.js",
+  "static/js/1.51d0aa16.chunk.js.map": "/leasprofile/static/js/1.51d0aa16.chunk.js.map",
+  "runtime~main.js": "/leasprofile/static/js/runtime~main.98c7fd52.js",
+  "runtime~main.js.map": "/leasprofile/static/js/runtime~main.98c7fd52.js.map",
+  "static/css/1.584590d0.chunk.css.map": "/leasprofile/static/css/1.584590d0.chunk.css.map",
+  "static/css/main.c01df495.chunk.css.map": "/leasprofile/static/css/main.c01df495.chunk.css.map",
+  "index.html": "/leasprofile/index.html",
+  "precache-manifest.2499cd680a6c3e125d8606934de29e31.js": "/leasprofile/precache-manifest.2499cd680a6c3e125d8606934de29e31.js",
+  "service-worker.js": "/leasprofile/service-worker.js"
 }

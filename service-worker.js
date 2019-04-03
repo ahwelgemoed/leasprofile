@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/ahwelgemoed/leasprofile/precache-manifest.eb81a3e87d4b8702095ecf802dc39b9b.js"
+  "/leasprofile/precache-manifest.2499cd680a6c3e125d8606934de29e31.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/ahwelgemoed/leasprofile/index.html", {
+workbox.routing.registerNavigationRoute("/leasprofile/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
