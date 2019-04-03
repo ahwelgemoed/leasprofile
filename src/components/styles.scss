@@ -6,6 +6,7 @@
   // url(../Font/Roboto-Regular.woff2) format('otf');
 }
 $break-small: 650px;
+$break-med: 767px;
 $break-large: 1200px;
 
 .home_header_banner_Home {
@@ -243,19 +244,10 @@ i {
 .navbar-light {
   border: none;
 }
-.show {
-  height: 100vh !important;
-  font-size: 25px;
-  transform: all 1s;
-  font-weight: 700;
-  transition: all 0.5s ease;
-  .navbar-nav {
-    // margin-top: 20px;
-  }
-}
+
 .collapse:not(.show) {
   @media screen and (max-width: $break-small) {
-    height: 100vh !important;
+    // height: 100vh !important;
     transition: all 0.5s ease;
   }
 }
@@ -269,9 +261,19 @@ i {
     transform: all 1s;
     font-size: 25px;
     font-weight: 700;
+    // height: 100vh;
   }
 }
-
+.navbar-collapse {
+  @media screen and (max-width: $break-med) {
+    height: 100vh !important;
+    height: 100vh !important;
+    font-size: 25px;
+    transform: all 1s;
+    font-weight: 700;
+    transition: all 0.5s ease;
+  }
+}
 .nav-link {
   color: black !important;
   &:hover {
@@ -303,5 +305,9 @@ footer {
     @media screen and (max-width: $break-small) {
       text-align: left !important;
     }
+  }
+}
+.navbar-nav {
+  @media screen and (max-width: $break-small) {
   }
 }
