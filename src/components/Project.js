@@ -41,7 +41,7 @@ const Borderys = styled.div`
   ${media.mamabear`
       a {
         color: ${props => props.theme.highLight} !important;
-        padding-top: 50px
+        padding-top: 20px
       }
    `}
 `;

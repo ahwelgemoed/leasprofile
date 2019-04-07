@@ -31,7 +31,7 @@ const Borderys = styled.div`
   ${media.mamabear`
       a {
         color: ${props => props.theme.highLight} !important;
-        padding-top: 50px
+        padding-top: 20px
       }
    `}
 `;
@@ -64,9 +64,7 @@ export default class Header extends Component {
               <Nav className="ml-auto" navbar>
                 <NavItem>
                   <Borderys>
-                    <NavLink href="#" onClick={this.scrollToBottom}>
-                      Projects
-                    </NavLink>
+                    <NavLink href="#">Projects</NavLink>
                   </Borderys>
                 </NavItem>
                 <NavItem>
@@ -76,9 +74,7 @@ export default class Header extends Component {
                 </NavItem>
                 <NavItem>
                   <Borderys>
-                    <NavLink href="#" onClick={this.scrollToBottom}>
-                      Get in Touch
-                    </NavLink>
+                    <NavLink href="#">Get in Touch</NavLink>
                   </Borderys>
                 </NavItem>
               </Nav>

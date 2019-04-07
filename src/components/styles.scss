@@ -50,6 +50,11 @@ $break-large: 1200px;
     height: auto;
   }
 }
+.col-12 {
+  .banner_Img {
+    height: 50vh !important;
+  }
+}
 .Header_Body_Col {
   // position: absolute;
   padding-top: 10vh;
@@ -343,6 +348,6 @@ footer {
   text-align: left !important;
 }
 .wordsss {
-  padding-bottom: 40px;
+  padding-bottom: 60px;
   padding-top: 20px;
 }
