@@ -90,7 +90,7 @@ class Project extends Component {
                   <Nav className="ml-auto" navbar>
                     <NavItem>
                       <Borderys>
-                        <NavLink href="/#projects">Projects</NavLink>
+                        <NavLink href="/">Projects</NavLink>
                       </Borderys>
                     </NavItem>
                     <NavItem>
@@ -100,7 +100,7 @@ class Project extends Component {
                     </NavItem>
                     <NavItem>
                       <Borderys>
-                        <NavLink href="/#callMe">Get in Touch</NavLink>
+                        <NavLink href="/">Get in Touch</NavLink>
                       </Borderys>
                     </NavItem>
                   </Nav>
