@@ -13,15 +13,15 @@ export default class Homer extends Component {
         <Container>
           <Row>
             <Col>
-              {/* <ScrollableAnchor id={'projects'}> */}
-              <Projects />
-              {/* </ScrollableAnchor> */}
+              <ScrollableAnchor id={'projects'}>
+                <Projects />
+              </ScrollableAnchor>
             </Col>
           </Row>
         </Container>
-        {/* <ScrollableAnchor id={'callMe'}> */}
-        <Contact />
-        {/* </ScrollableAnchor> */}
+        <ScrollableAnchor id={'callMe'}>
+          <Contact />
+        </ScrollableAnchor>
       </React.Fragment>
     );
   }

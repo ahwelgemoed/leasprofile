@@ -13,23 +13,28 @@ import { ThemeProvider } from 'styled-components';
 
 const defaults = {
   backgroundColor: '#FAF0EA',
-  highLight: '#FB5615'
+  highLight: '#FB5615',
+  footy: '#FB5615'
 };
 const blue = {
   backgroundColor: '#EAF6FA',
-  highLight: '#2E00BE'
+  highLight: '#2E00BE',
+  footy: '#D8D8D8'
 };
 const green = {
   backgroundColor: '#E8F7E9',
-  highLight: '#2E00BE'
+  highLight: '#2E00BE',
+  footy: '#1200F2'
 };
 const yellow = {
   backgroundColor: '#FFFAE5',
-  highLight: '#A43D11'
+  highLight: '#A43D11',
+  footy: '#A43D11'
 };
 const red = {
   backgroundColor: '#FFEFEF',
-  highLight: '#F20825'
+  highLight: '#F20825',
+  footy: '#F20825'
 };
 const themes = [red, blue, yellow, green, defaults];
 // Randomizes the Themes on load

@@ -235,7 +235,7 @@ i {
   border: none !important;
 }
 .sticky-top {
-  padding: 30px;
+  // padding: 30px;
   // background: #f9f9f9;
 }
 .colPadd {
@@ -321,4 +321,7 @@ footer {
 .navbar-nav {
   @media screen and (max-width: $break-small) {
   }
+}
+.footer-Left {
+  text-align: left !important;
 }
