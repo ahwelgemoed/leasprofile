@@ -14,7 +14,7 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { List } from 'react-content-loader';
 import { firestoreConnect } from 'react-redux-firebase';
-
+import media from './media';
 import styled from 'styled-components';
 
 const Ieader = styled.div`
@@ -36,6 +36,14 @@ const Parrie = styled.p`
 const Bordery = styled.div`
   border-top: 3px ${props => props.theme.highLight} solid;
   width: 15%;
+`;
+const Borderys = styled.div`
+  ${media.mamabear`
+      a {
+        color: ${props => props.theme.highLight} !important;
+        padding-top: 50px
+      }
+   `}
 `;
 
 class Project extends Component {
@@ -81,13 +89,19 @@ class Project extends Component {
                 <Collapse className="kykNet" isOpen={this.state.isOpen} navbar>
                   <Nav className="ml-auto" navbar>
                     <NavItem>
-                      <NavLink href="/#projects">Projects</NavLink>
+                      <Borderys>
+                        <NavLink href="/">Projects</NavLink>
+                      </Borderys>
                     </NavItem>
                     <NavItem>
-                      <NavLink href="#">Resume</NavLink>
+                      <Borderys>
+                        <NavLink href="#">Resume</NavLink>
+                      </Borderys>
                     </NavItem>
                     <NavItem>
-                      <NavLink href="/#callMe">Get in Touch</NavLink>
+                      <Borderys>
+                        <NavLink href="/">Get in Touch</NavLink>
+                      </Borderys>
                     </NavItem>
                   </Nav>
                 </Collapse>
@@ -102,7 +116,7 @@ class Project extends Component {
                     <p>{project.Body}</p>
                   </div>
                 </Col>
-                <Col xs="12" lg="6" md="6" className="Header_Body_Col">
+                <Col xs="12" lg="6" md="6" className="Header_Body_Col smally">
                   <span>
                     {project.Technology.map((t, i) => {
                       let totals = project.Technology.length - 1;

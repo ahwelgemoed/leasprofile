@@ -12,6 +12,7 @@ import {
   Container
 } from 'reactstrap';
 import './styles.scss';
+import media from './media';
 import styled from 'styled-components';
 
 const Ieader = styled.div`
@@ -25,6 +26,14 @@ const Marky = styled.mark`
 const Bordery = styled.div`
   border-top: 3px ${props => props.theme.highLight} solid;
   width: 15%;
+`;
+const Borderys = styled.div`
+  ${media.mamabear`
+      a {
+        color: ${props => props.theme.highLight} !important;
+        padding-top: 50px
+      }
+   `}
 `;
 
 export default class Header extends Component {
@@ -41,6 +50,9 @@ export default class Header extends Component {
       isOpen: !this.state.isOpen
     });
   }
+  scrollToBottom = () => {
+    window.scrollTo(0, document.body.scrollHeight);
+  };
   render() {
     return (
       <Ieader className="home_header_banner">
@@ -51,13 +63,23 @@ export default class Header extends Component {
             <Collapse className="kykNet" isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink href="#projects">Projects</NavLink>
+                  <Borderys>
+                    <NavLink href="#" onClick={this.scrollToBottom}>
+                      Projects
+                    </NavLink>
+                  </Borderys>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="#">Resume</NavLink>
+                  <Borderys>
+                    <NavLink href="#">Resume</NavLink>
+                  </Borderys>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="#callMe">Get in Touch</NavLink>
+                  <Borderys>
+                    <NavLink href="#" onClick={this.scrollToBottom}>
+                      Get in Touch
+                    </NavLink>
+                  </Borderys>
                 </NavItem>
               </Nav>
             </Collapse>
