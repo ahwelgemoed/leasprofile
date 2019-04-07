@@ -318,6 +318,7 @@ i {
 }
 .fab {
   font-size: 16px;
+  color: white;
 }
 h3 {
   margin-bottom: 0px !important;
@@ -350,4 +351,9 @@ footer {
 .wordsss {
   padding-bottom: 60px;
   padding-top: 20px;
+}
+footer {
+  a {
+    color: white !important;
+  }
 }

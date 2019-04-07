@@ -22,10 +22,20 @@ export default function Footer() {
             <div className="col-md-4 col-lg-4 col-sm-12 text-md-left mb-4 mb-md-0">
               <h6 className="mb-0  ">
                 <span>
-                  <i className="fab fa-instagram" />
+                  <a
+                    href="https://www.instagram.com/leadesousa/"
+                    target="_blank"
+                  >
+                    <i className="fab fa-instagram" />
+                  </a>
                 </span>
                 <span>
-                  <i className="fab fa-pinterest-p" />
+                  <a
+                    href="https://www.linkedin.com/in/leandra-de-sousa-9bb140137/"
+                    target="_blank"
+                  >
+                    <i className="fab fa-linkedin" />
+                  </a>
                 </span>
               </h6>
             </div>

@@ -64,17 +64,19 @@ export default class Header extends Component {
               <Nav className="ml-auto" navbar>
                 <NavItem>
                   <Borderys>
-                    <NavLink href="#">Projects</NavLink>
+                    <NavLink href="/#projects">Projects</NavLink>
                   </Borderys>
                 </NavItem>
                 <NavItem>
                   <Borderys>
-                    <NavLink href="#">Resume</NavLink>
+                    <NavLink href="/Leandra - Curriculum Vitae.pdf" download>
+                      Resume
+                    </NavLink>
                   </Borderys>
                 </NavItem>
                 <NavItem>
                   <Borderys>
-                    <NavLink href="#">Get in Touch</NavLink>
+                    <NavLink href="/#callMe">Get in Touch</NavLink>
                   </Borderys>
                 </NavItem>
               </Nav>
