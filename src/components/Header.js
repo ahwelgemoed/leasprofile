@@ -64,9 +64,7 @@ export default class Header extends Component {
               <Nav className="ml-auto" navbar>
                 <NavItem>
                   <Borderys>
-                    <NavLink href="#" onClick={this.scrollToBottom}>
-                      Projects
-                    </NavLink>
+                    <NavLink href="/#projects">Projects</NavLink>
                   </Borderys>
                 </NavItem>
                 <NavItem>
@@ -76,7 +74,7 @@ export default class Header extends Component {
                 </NavItem>
                 <NavItem>
                   <Borderys>
-                    <NavLink href="#" onClick={this.scrollToBottom}>
+                    <NavLink href="/#callMe" onClick={this.scrollToBottom}>
                       Get in Touch
                     </NavLink>
                   </Borderys>

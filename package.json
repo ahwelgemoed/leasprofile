@@ -1,7 +1,7 @@
 {
   "name": "rrfb",
-  "version": "0.1.1",
-  "homepage": "https://thisisleahere.com",
+  "version": "0.1.4",
+  "homepage": "https://ahwelgemoed.github.io/leasprofile/",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.2.1",
