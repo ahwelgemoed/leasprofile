@@ -41,8 +41,8 @@ $break-large: 1200px;
 }
 .banner_Img {
   height: 80vh;
-  @media screen and (max-width: $break-small) {
-    height: 200px;
+  @media screen and (max-width: $break-med) {
+    height: 20vh !important;
   }
   .myImg {
     display: block;
@@ -149,6 +149,14 @@ $break-large: 1200px;
 .nav-link {
   font-family: 'Muli', sans-serif;
   font-weight: 300;
+  @media screen and (max-width: $break-med) {
+    font-family: 'GT Super Display', cursive;
+  }
+}
+.banner_Img {
+  @media screen and (max-width: $break-med) {
+    height: 20vh;
+  }
 }
 p {
   font-family: 'Muli', sans-serif;
@@ -264,6 +272,14 @@ i {
     // height: 100vh;
   }
 }
+.Header_Body_Col {
+  .people {
+    @media screen and (max-width: $break-small) {
+      padding-bottom: 40px;
+      // height: 100vh;
+    }
+  }
+}
 .navbar-collapse {
   @media screen and (max-width: $break-med) {
     height: 100vh !important;
@@ -293,6 +309,7 @@ i {
 }
 .navbar-brand {
   letter-spacing: 0.6px;
+  font-weight: 400;
 }
 .fab {
   font-size: 16px;
@@ -324,4 +341,8 @@ footer {
 }
 .footer-Left {
   text-align: left !important;
+}
+.wordsss {
+  padding-bottom: 40px;
+  padding-top: 20px;
 }

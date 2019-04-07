@@ -92,7 +92,7 @@ export default class Header extends Component {
                   focus on <Marky>UI/UX.</Marky>
                 </h3>
                 <Bordery xs="12">{/* <Bordery className="arbit" /> */}</Bordery>
-                <p>
+                <p className="wordsss">
                   I create unique and memorable experiences for people. I’m
                   driven by an interest in human behaviour & curiousity and a
                   lifelong desire to help others.
